@@ -11,13 +11,10 @@ class Student(BaseModel):
 
 
 class StudentResource:
-    #
-    # These endpoints are on Prof. Ferguson's SwaggerHub mock APIs
-    #
     resources = [
         {
             "resource": "Microservice1",
-            "url": 'http://ec2-34-207-147-193.compute-1.amazonaws.com:8011/'  # url们打不开
+            "url": 'http://ec2-34-207-147-193.compute-1.amazonaws.com:8011/'
         },
         {
             "resource": "Microservice2",
@@ -63,10 +60,7 @@ class StudentResource:
                 full_result[response["resource"]] = response["data"]
             end_time = time.time()
             full_result["elapsed_time"] = end_time - start_time
-
             return full_result
-
-            # print("\nFull Result = ", json.dumps(full_result, indent=2))
 
     async def get_student_sync(self):
         full_result = None

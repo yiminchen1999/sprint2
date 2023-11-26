@@ -1,18 +1,11 @@
-#
-# This example is a modification (slight) of
-# https://martinxpn.medium.com/making-requests-with-asyncio-in-python-78-100-days-of-python-eb1570b3f986
-#
+
 import asyncio
 import aiohttp
 import json
-
-#
-# These endpoints are on Prof. Ferguson's SwaggerHub mock APIs
-#
 resources = [
     {
         "resource": "Microservice1",
-        "url": 'http://ec2-34-207-147-193.compute-1.amazonaws.com:8011/'  # url们打不开
+        "url": 'http://ec2-34-207-147-193.compute-1.amazonaws.com:8011/'
     },
     {
         "resource": "Microservice2",

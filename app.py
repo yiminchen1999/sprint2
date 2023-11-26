@@ -14,12 +14,6 @@ from pydantic import BaseModel
 SECRET_KEY = "b63486c172929fbda280d0e59b8546945d683cda5f281ca9da40f10ae0988fd3"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-
-
-#
-# This code is a total hack just to make the example easier to use.
-# It updates the hashed password to something simple and documented.
-#
 def init_fake_user(user_name, user_full_name, user_pw, user_email):
 
     hashed_password = get_password_hash(user_pw)
